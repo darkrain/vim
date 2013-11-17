@@ -6,15 +6,20 @@ set history=500
 set clipboard=unnamedplus
 set paste
 
-au FileType php set omnifunc=phpcomplete#CompletePHP
-
-
+" Фолдинг по отсупам
+set foldenable
+set foldlevel=100
+set foldmethod=indent
+" Выключаем надоедливый "звонок"
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 
 let g:neocomplcache_enable_at_startup = 1
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType php set omnifunc=phpcomplete#Complete
+autocmd FileType html,markdown set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 
 "------  Visual Options  ------
