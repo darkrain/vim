@@ -175,7 +175,7 @@ if has("gui_running")
 else
     set t_Co=256
     colorscheme Mustang             "This theme actually works in 256, ir_black doesn't
-	set mouse=a						"This allows mouse scrolling in terminal, and selection of text
+	nnoremap <LeftMouse> <nop>
 	" ,v = Paste
 	map <Leader>v "+gP
 	" ,c = Copy
